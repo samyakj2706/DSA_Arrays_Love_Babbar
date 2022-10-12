@@ -1,0 +1,29 @@
+//6
+//Reverse the array
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int q;
+	cin>>q;
+	while(q--){
+	    int n ;
+	    cin>>n;
+	    vector<int>v;
+	    for(int i=0 ; i<n ;i++){
+	        int x;
+	        cin>>x;
+	        v.push_back(x);
+	    }
+	    for(int i=0 ; i<n/2 ;i++){
+	        iter_swap(v.begin() + i, v.begin() + n-i-1);
+	       // i and i-n-1 are the positions we want to swap
+	       //iter_swap is the function
+	    }
+	    for(auto x: v){
+	        cout<<x<<" ";
+	    }
+	    cout<<endl;
+	}
+	return 0;
+}
